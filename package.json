@@ -1,0 +1,22 @@
+{
+  "name": "labextra_mod1_lc",
+  "version": "1.0.0",
+  "description": "extra lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javicu07/labextra_mod1_LC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Javicu07/labextra_mod1_LC/issues"
+  },
+  "homepage": "https://github.com/Javicu07/labextra_mod1_LC#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
