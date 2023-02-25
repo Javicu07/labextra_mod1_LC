@@ -4,13 +4,15 @@ html{
 }
 
 body{
+    $tablet_display: 768px; 
+
     width: 100vw;
     height: 100vh;
 
     & > header{
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 45% 55%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.45fr 0.55fr;
         grid-template-areas: 
             "Toolbar"
             "Page_Title"; 
@@ -34,17 +36,18 @@ body{
     & > main{
         padding: 0px;
         display: grid;
-        grid-template-columns: 15% 85%;
-        grid-template-rows: 100%;
+        grid-template-columns: 0.15fr 0.85fr;
+        grid-template-rows: 1fr;
         grid-template-areas: 
             "Page_Container Principal";
             
             .page-container{
+                //position: fixed;
                 grid-area: Page_Container;
                 background-color: darkgreen;
                 
                 .menu-container{
-
+                    
                     .menu-title{
                         display: flex;
                         justify-content: center;
@@ -54,6 +57,7 @@ body{
                     }
                     
                     & > ul{
+                        
                         background-color: antiquewhite;
                         font-size: 1.2em;
                         list-style:none;
