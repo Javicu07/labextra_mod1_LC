@@ -5,7 +5,7 @@ html{
 
 body{
     $tablet_display: 768px; 
-
+    margin: 0px;
     width: 100vw;
     height: 100vh;
 
@@ -16,7 +16,23 @@ body{
         grid-template-areas: 
             "Toolbar"
             "Page_Title"; 
-            
+        
+        @media screen and (max-width:768px){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "Page_Title";
+            margin: 0px;
+            padding: 0px;
+            .toolbar{
+                & > div{
+                display: none;
+                }
+                #example_input{
+                    display: none;
+                }
+            }
+        }    
         .toolbar{
             display: flex;
             flex-direction: row;
@@ -27,7 +43,7 @@ body{
 
         .page-title{
             grid-area: Page_Title;
-            margin: 5px 0px 0px 0px;
+            margin: 0px;
             padding: 3px 6px;
             background-color: limegreen;
         }
@@ -40,10 +56,17 @@ body{
         grid-template-rows: 1fr;
         grid-template-areas: 
             "Page_Container Principal";
+        
+        @media screen and (max-width:768px){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.30fr 0.70fr;
+            grid-template-areas: 
+            "Page_Container"
+            "Principal";
+        }
             
             .page-container{
-                //position: fixed;
-                
                 grid-area: Page_Container;
                 background-color: darkgreen;
                 
