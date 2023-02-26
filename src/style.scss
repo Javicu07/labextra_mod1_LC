@@ -22,11 +22,12 @@ body{
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             grid-template-areas: "Page_Title";
+            font-size: 1.6em;
             margin: 0px;
             padding: 0px;
             .toolbar{
                 & > div{
-                display: none;
+                    display: none;
                 }
                 #example_input{
                     display: none;
@@ -60,16 +61,18 @@ body{
         @media screen and (max-width:768px){
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 0.30fr 0.70fr;
+            grid-template-rows: 0.20fr 0.80fr;
             grid-template-areas: 
             "Page_Container"
             "Principal";
+
         }
             
             .page-container{
                 grid-area: Page_Container;
                 background-color: darkgreen;
-                
+                position: sticky;
+                top: 0px;
                 .menu-container{
                     position: sticky;
                     top: 0px;
@@ -80,10 +83,28 @@ body{
                         align-items: center;
                         font-size: 1.6em;
                         color: aliceblue;
+
+                        @media screen and (max-width:768px){
+                            display: none;
+                        }
                     }
                     
                     & > ul{
-                        
+                        @media screen and (max-width:768px){
+                            display: flex;
+                            justify-content: space-evenly;
+                            background-color: darkgreen;
+                            list-style: none;
+                            padding-inline-start: 0px;
+                            width: 1fr;
+                            font-size: 2em;
+                            & > li{
+                                //display: ;
+                                background-color: antiquewhite;
+                                border: 2px solid black;
+                                padding: 7px 20px;
+                            }
+                        }
                         background-color: antiquewhite;
                         font-size: 1.2em;
                         list-style:none;
@@ -108,7 +129,31 @@ body{
                     flex-wrap: wrap;
                     gap: 10px;
 
+                    @media screen and (max-width:768px){
+                        display: flex;
+                        flex-direction: column;
+
+                        }
+                    }
                     .card-item{
+                        @media screen and (max-width:768px){
+                            border: 0px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: stretch;
+
+                            & > img{
+                                padding: 5px;
+                                width: 70px;
+                                height: 70px;
+                            }
+                            .member-name{
+                                font-size: 1.5em;
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+
                         border: 1px solid;
                         background-color: white;
                         display: flex;
@@ -126,4 +171,4 @@ body{
                 }
             }
         }            
-    }
+    
