@@ -43,12 +43,15 @@ body{
             
             .page-container{
                 //position: fixed;
+                
                 grid-area: Page_Container;
                 background-color: darkgreen;
                 
                 .menu-container{
-                    
+                    position: sticky;
+                    top: 0px;
                     .menu-title{
+                        
                         display: flex;
                         justify-content: center;
                         align-items: center;
