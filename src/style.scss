@@ -12,7 +12,7 @@ body{
     & > header{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.45fr 0.55fr;
+        grid-template-rows: 1fr 1.2fr;
         grid-template-areas: 
             "Toolbar"
             "Page_Title"; 
@@ -53,7 +53,7 @@ body{
     & > main{
         padding: 0px;
         display: grid;
-        grid-template-columns: 0.15fr 0.85fr;
+        grid-template-columns: 1fr 5.8fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
             "Page_Container Principal";
@@ -61,7 +61,7 @@ body{
         @media screen and (max-width:768px){
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 0.20fr 0.80fr;
+            grid-template-rows: 1fr 16fr;
             grid-template-areas: 
             "Page_Container"
             "Principal";
@@ -141,6 +141,7 @@ body{
                             display: flex;
                             flex-direction: row;
                             align-items: stretch;
+                            gap: 8px;
 
                             & > img{
                                 padding: 5px;
